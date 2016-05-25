@@ -1,0 +1,18 @@
+<h1>Registrar nuevo uso</h1>
+
+<form action="/nuevouso" method="post">
+  <select name="producto">
+    <% @compras.each do |compra| %>
+      <option value="<%= compra[0] %>"><%= compra[0] %></option>
+    <% end %>
+  </select>
+
+  <input type="number" name="unidades" placeholder="Unidades" />
+
+  <button type="submit">Agregar</button>
+</form>
+
+<h2>Usos realizados</h2>
+<% @usos.each do |uso| %>
+  <p><%= uso[0] %>: <%= uso[1] %></p>
+<% end %>

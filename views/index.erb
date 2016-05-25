@@ -1,0 +1,11 @@
+<h1>Bienvenido!</h1>
+
+<a href="/compras">Ingresar nueva compra</a>
+
+<a href="/usos">Registrar nuevo uso</a>
+
+<h2>Productos disponibles</h2>
+
+<% @disponibles.each do |disponible| %>
+  <p><%= disponible[1] %> <%= disponible[0] %></p>
+<% end %>

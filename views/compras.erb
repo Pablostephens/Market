@@ -1,0 +1,12 @@
+<h1>Ingresar nueva compra</h1>
+
+<form action="/nuevacompra" method="post">
+  <input type="text" name="producto" placeholder="Producto" />
+  <input type="number" name="unidades" placeholder="Unidades" />
+
+  <button type="submit">Agregar</button>
+</form>
+
+<% @compras.each do |compra| %>
+  <p><%= compra[0] %>: <%= compra[1] %></p>
+<% end %>
